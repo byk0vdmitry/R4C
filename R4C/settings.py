@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'customers',
     'orders',
-    'robots'
+    'robots.apps.RobotsConfig'
 ]
 
 MIDDLEWARE = [
@@ -121,3 +121,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Set the email backend to use the SMTP backend
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+# Set the host for the email server
+EMAIL_HOST = 'localhost'
+
+# Set the port for the email server
+EMAIL_PORT = 1025
